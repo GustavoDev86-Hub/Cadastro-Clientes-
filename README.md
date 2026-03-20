@@ -1,73 +1,72 @@
-🐘 Cadastro de Clientes (PHP & MariaDB)
-Um sistema de gerenciamento CRUD (Create, Read, Update, Delete) desenvolvido com PHP puro, focado em simplicidade, performance e manipulação direta de dados.
+🐘 Cadastro de Clientes - PHP & MariaDB (Dockerized)
+Uma aplicação robusta de gerenciamento de clientes desenvolvida em PHP puro, estruturada para rodar em ambientes conteinerizados e focada em operações fundamentais de sistemas web.
 
 📌 Sobre o Projeto
-Este projeto foi construído para aplicar conceitos fundamentais de desenvolvimento web Server-side. Ele demonstra como estruturar uma aplicação funcional utilizando tags HTML para a interface e PHP para a lógica de persistência e regras de negócio.
+Este projeto foi desenvolvido para consolidar conhecimentos em Sistemas para a Internet, focando na comunicação entre o servidor (PHP) e o banco de dados (MariaDB) utilizando boas práticas de segurança, como Prepared Statements via MySQLi.
 
 🛠️ Stack Tecnológica
-PHP 8+: Processamento de lógica e comunicação com o banco.
+PHP 8.2: Processamento lógico no lado do servidor.
 
-MariaDB: Sistema de gerenciamento de banco de dados relacional.
+MariaDB 10.11: Sistema de gerenciamento de banco de dados relacional.
 
-PDO (PHP Data Objects): Interface de abstração para acesso a dados com foco em segurança (Prepared Statements).
+Docker & Docker Compose: Orquestração de containers para garantir portabilidade.
 
-HTML5: Estruturação semântica da interface.
+HTML5 & CSS3: Estrutura e estilização da interface do usuário.
 
 ⚙️ Funcionalidades
-✅ Cadastro: Inserção de novos registros via formulário.
+✅ Criação de Clientes: Cadastro com validação simples e persistência segura.
 
-✅ Consulta: Listagem dinâmica de clientes cadastrados no MariaDB.
+✅ Listagem em Tempo Real: Visualização de registros ordenados pelo ID.
 
-✅ Edição: Recuperação e atualização de informações existentes.
+✅ Exclusão com Confirmação: Remoção de dados via parâmetro GET com alerta de segurança.
 
-✅ Exclusão: Remoção segura de registros do banco de dados.
+✅ Ambiente Isolado: Execução via Docker sem necessidade de configurar ambiente local manualmente.
 
-📁 Estrutura do Projeto
+📁 Estrutura do Repositório
 Bash
 Cadastro-Clientes/
-│── db/
-│   └── database.sql   # Script de criação das tabelas no MariaDB
-│── includes/
-│   └── conexao.php    # Configuração de conexão PDO
-│── index.php          # Painel principal / Listagem
-│── salvar.php         # Lógica de processamento (Insert/Update)
-│── excluir.php        # Lógica de deleção
+│── Dockerfile         # Configuração da imagem PHP + MySQLi
+│── docker-compose.yml # Orquestração dos serviços (App na porta 8083)
+│── index.php          # Interface principal e listagem de clientes
+│── processa.php       # Lógica de inserção no banco de dados
+│── excluir.php        # Lógica de remoção de registros
 └── README.md
-🚀 Como Executar o Projeto
+🚀 Como Executar com Docker
 Pré-requisitos
-Ambiente de desenvolvimento local (XAMPP, Laragon ou servidor Apache manual).
+Docker instalado.
 
-Instância do MariaDB ativa.
+Docker Compose instalado.
 
-Instalação
+Passos para subir a aplicação
 Clone o repositório:
 
 Bash
 git clone https://github.com/GustavoDev86-Hub/Cadastro-Clientes-
-Configure o Banco:
-Importe o arquivo SQL no seu console MariaDB ou via phpMyAdmin:
+cd Cadastro-Clientes-
+Suba os containers:
 
-SQL
-SOURCE db/database.sql;
-Ajuste a Conexão:
-Edite o arquivo de conexão com seu usuário e senha do banco de dados local.
-
-Acesse via Browser:
-http://localhost/Cadastro-Clientes-
+Bash
+docker-compose up -d --build
+Acesse a aplicação:
+Abra o navegador e digite: http://localhost:8083.
 
 🎯 Foco Acadêmico
-O projeto explora:
+O projeto aplica conceitos práticos de:
 
-Manipulação de superglobais ($_POST, $_GET).
+Integração entre PHP e MariaDB no ambiente Docker.
 
-Conexão e tratamento de erros com PDO.
+Uso de MySQLi para manipulação de dados.
 
-Integração PHP + MariaDB sem o uso de frameworks.
-
-Boas práticas em sistemas de informação para a internet.
+Gerenciamento de portas e mapeamento de volumes em containers.
 
 👨‍💻 Autor
 Gustavo Viana
+
+Acadêmico de Tecnologia em Sistemas para a Internet (IFMS).
+
+Desenvolvedor Web focado em Backend e Infraestrutura.
+
+GitHub
 
 Acadêmico de Tecnologia em Sistemas para a Internet
 
