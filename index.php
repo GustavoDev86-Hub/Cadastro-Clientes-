@@ -39,7 +39,7 @@ error_reporting(E_ALL);
         <tbody>
             <?php
             // Conexão direta para a listagem
-            $conn = new mysqli("localhost", "gusta_dev", "123456", "sistema_clientes");
+            $conn = new mysqli("db", "gusta_dev", "123456", "sistema_clientes");
 
             if ($conn->connect_error) {
                 echo "<tr><td colspan='4'>Erro ao conectar: " . $conn->connect_error . "</td></tr>";

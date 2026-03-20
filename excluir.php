@@ -1,6 +1,6 @@
 <?php
 // 1. Conexão (use o usuário 'gusta_dev' que criamos)
-$conn = new mysqli("localhost", "gusta_dev", "123456", "sistema_clientes");
+$conn = new mysqli("db", "gusta_dev", "123456", "sistema_clientes");
 
 // 2. Pegar o ID da URL
 if (isset($_GET['id'])) {

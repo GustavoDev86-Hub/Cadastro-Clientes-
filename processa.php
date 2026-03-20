@@ -4,7 +4,7 @@ $usuario = "dev_user"; // O usuário que criamos no passo 1
 $senha = "sua_senha_aqui"; 
 $banco = "sistema_clientes";
 
-$conn = new mysqli("localhost", "gusta_dev", "123456", "sistema_clientes");
+$conn = new mysqli("db", "gusta_dev", "123456", "sistema_clientes");
 
 if ($conn->connect_error) {
     die("Erro na conexão: " . $conn->connect_error);
